@@ -5,11 +5,14 @@ export const singleProduct = (req, res) => {
     res.send("Get the Single product with id ");
 }
 export const createProduct = (req, res) => {
-    res.send("Create a new product");
+    const body = req.body;
+    res.json(body);
 }
 export const updateProduct = (req, res) => {
     res.send("Update the product with id ");
 }
 export const deleteProduct = (req, res) => {
-    res.send("Delete the product with id ");
+const {id} = req.params;
+console.log("Delete ID NO:", id);
+        res.send(`Delete the product with id ${id}`);
 }
