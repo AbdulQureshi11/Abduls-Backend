@@ -1,5 +1,8 @@
-export const allCategories = (req, res) => {
-    res.send("All categories");
+import db from "../../Config/Models.js";
+
+export const allCategories = async (req, res) => {
+    const data = await db.category.findAll()
+    res.send(data);
 }
 export const singleCategory = (req, res) => {
     res.send("Get the Single category with id ");
