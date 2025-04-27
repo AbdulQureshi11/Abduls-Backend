@@ -9,7 +9,7 @@ const categorymodel = (DataType, Sequelize) => {
             autoIncrement: true,
             primaryKey: true
         },
-        name: {
+        Categoryname: {
             type: DataTypes.STRING
         }
     })
