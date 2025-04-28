@@ -1,4 +1,5 @@
 import express from 'express'
+import cors from 'cors'
 import bodyParser from 'body-parser'
 import productrouter from './src/app/products/ProductRouter.js'
 import categoryrouter from './src/app/Categories/CategoryRouter.js';
@@ -7,6 +8,7 @@ import sequelize from './src/Config/Config.js';
 const app = express()
 const port = 9000
 
+app.use(cors())
 app.use(bodyParser.json())
 app.use('/api', productrouter);
 app.use('/api', categoryrouter);
